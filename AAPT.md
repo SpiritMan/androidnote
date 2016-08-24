@@ -23,7 +23,7 @@ aapt即Android Asset Packaging Tool，在SDK的build-tools目录下。该工具�
 例如：
 
 ```
-./aapt l /Users/yolo/AndroidStudioProjects/android_newzhaime/app/build/outputs/apk/origin.apk
+./aapt l /Users/yolo/AndroidStudioProjects/android/app/build/outputs/apk/origin.apk
 ```
 
 -v:会以table的形式输出目录，table的表目有：Length、Method、Size、Ratio、Date、Time、CRC-32、Name。
@@ -41,30 +41,30 @@ Ratio表示压缩率。CRC-32未明其意，Sodino盼指教。
 aapt dump badging filepath 用来查看apk的所有信息，包括权限，包名，启动页等。
 
 ```
-./aapt dump badging /Users/yolo/Desktop/用户端Apk/origin/origin.apk
+./aapt dump badging /Users/yolo/Desktop/Apk/origin/origin.apk
 ```
 
 aapt dump permissions filepath 用来查看apk中所用到的权限
 
 ```
-./aapt dump permissions /Users/yolocc/Desktop/用户端Apk/zhaime_v3.5.3/zhaime_3.5.3_360_signed.apk
+./aapt dump permissions /Users/yolo/Desktop/Apk/v3.5.3/origin.apk
 ```
 
 aapt dump resources filepath 用来查看apk中的资源信息
 
 ```
-./aapt dump resources /Users/yolocc/Desktop/ 用户端Apk/zhaime_v3.5.3/zhaime_3.5.3_360_signed.apk
+./aapt dump resources /Users/yolo/Desktop/Apk/v3.5.3/origin.apk
 ```
 
 aapt dump configurations filepath 用来查看apk的配置信息。
 
 ```
-./aapt dump configurations /Users/yolocc/Desktop/用户端Apk/zhaime_v3.5.3/zhaime_origin.apk
+./aapt dump configurations /Users/yolo/Desktop/Apk/v3.5.3/origin.apk
 ```
 
 在查看文件太多时，命令行查看不好，我们可以导出来 在命令后面加入 > filepath(导出文件的目录)就可以了。
 
 ```
-./aapt dump badging /Users/yolocc/Desktop/用 户端Apk/zhaime_v3.5.3/zhaime_3.5.3_360_signed.apk >/Users/yolocc/Desktop/用 户端Apk/zhaime_v3.5.3/test.txt
+./aapt dump badging /Users/yolo/Desktop/Apk/v3.5.3/origin.apk >/Users/yolo/Desktop/Apk/v3.5.3/test.txt
 ```
 
