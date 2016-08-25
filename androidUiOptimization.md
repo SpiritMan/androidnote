@@ -75,6 +75,7 @@ activity_logo.xml
 
 ### 3、< ViewStub />的使用
 ViewStub是一个不可见的，能在运行期间延迟加载的大小为0的View，它直接继承于View。当对一个ViewStub调用inflate()方法或设置它可见时，系统会加载在ViewStub标签中引入的我们自己定义的View，然后填充在父布局当中。在对ViewStub调用inflate()方法或设置visible之前，它是不占用布局空间和系统资源的。
+在我们用来显示网络请求结果的时候，可以使用<ViewStub>，通过网络请求的结果来判断时候要显示控件，提高流畅度。
 error.xml
 
 ```
