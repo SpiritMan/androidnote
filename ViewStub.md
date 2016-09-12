@@ -185,4 +185,4 @@ button.setOnClickListener(new View.OnClickListener() {
 
 - ViewStub不支持<merge>标签
 
-好了ViewStub就介绍完了，分析源码，继续努力，O(∩_∩)O~。
+好了ViewStub就介绍完了，di'yi'ci分析源码，继续努力，O(∩_∩)O~。
