@@ -19,4 +19,14 @@
            }
        }
    ```
+   
+2.swiperefreshlayout,第一次进入页面的时候显示加载进度条
+   ```java
+   mSwipeRefreshLayout.post(new Runnable() {
+    @Override    
+   public void run() {
+       mSwipeRefreshLayout.setRefreshing(true);
+    }
+});
+   ```
 
