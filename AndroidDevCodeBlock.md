@@ -68,6 +68,15 @@
             android:name="EASEMOB_APPKEY"
             android:value="${emAppKey}" />
    ```   
+5.拨打电话
+   Intent.ACTION_DIAL直接拨打 需要权限
+   Intent.FLAG_ACTIVITY_NEW_TASK 跳转到拨号界面，不需要权限
+   ```java
+         //原来用Intent.ACTION_DIAL，会跳到拨号界面
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "18717937864"));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+   ```   
    
 
 
