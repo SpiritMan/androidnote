@@ -37,5 +37,37 @@
    ```   
    或在AndroidManifest.xml中设置Activity的启动模式为singleTask
    
+4.替换AndroidManifest中的占位符
+   build文件
+   ```java
+   buildTypes {
+        dev {
+            debuggable true
+            //替换AndroidManifest中的占位符
+            manifestPlaceholders = [
+                    //环信应用的appkey
+                    "emAppKey": "11721dev",
+            ]
+           }
+            
+            test {
+            debuggable true
+            //替换AndroidManifest中的占位符
+            manifestPlaceholders = [
+                    //环信应用的appkey
+                    "emAppKey": "11721test",
+            ]
+           }
+        }
+   ```   
+   AndroidManifest.xml
+   
+   ```java
+   <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="${emAppKey}" />
+   ```   
+   
 
 
