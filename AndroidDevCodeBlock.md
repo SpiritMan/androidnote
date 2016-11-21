@@ -73,7 +73,7 @@
    Intent.FLAG_ACTIVITY_NEW_TASK 跳转到拨号界面，不需要权限
    ```java
          //原来用Intent.ACTION_DIAL，会跳到拨号界面
-        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "18717937864"));
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "10086"));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
    ```   
