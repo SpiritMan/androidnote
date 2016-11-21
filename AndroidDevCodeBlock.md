@@ -29,4 +29,13 @@
     }
 });
    ```
+3.消除A页面到A页面之间的页面，例如A->B->C->A，
+   ```java
+   Intent intent = new Intent(C.this, A.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+   ```   
+   或在AndroidManifest.xml中设置Activity的启动模式为singleTask
+   
+
 
