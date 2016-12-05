@@ -79,6 +79,6 @@
    ```   
 6.webview全屏显示image
    ```java
-         String imgSrcHtml = "<html><img src='" + url + "' style='width:100%;height:auto'/></html>";
-         mWebView.loadData(imgSrcHtml, "text/html", "UTF-8");
+   String imgSrcHtml = "<html><img src='" + url + "' style='width:100%;height:auto'/></html>";
+   mWebView.loadData(imgSrcHtml, "text/html", "UTF-8");
    ``` 
