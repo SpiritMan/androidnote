@@ -19,27 +19,27 @@
            }
        }
    ```
-   
+
 2.swiperefreshlayout,第一次进入页面的时候显示加载进度条
-   ```java
+```java
    mSwipeRefreshLayout.post(new Runnable() {
     @Override    
    public void run() {
        mSwipeRefreshLayout.setRefreshing(true);
     }
 });
-   ```
+```
 3.消除A页面到A页面之间的页面，例如A->B->C->A，
-   ```java
+```java
    Intent intent = new Intent(C.this, A.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-   ```   
+```
    或在AndroidManifest.xml中设置Activity的启动模式为singleTask
-   
+
 4.替换AndroidManifest中的占位符
    build文件
-   ```java
+```java
    buildTypes {
         dev {
             debuggable true
@@ -59,26 +59,42 @@
             ]
            }
         }
-   ```   
+```
    AndroidManifest.xml
-   
-   ```java
+
+```java
    <!-- 设置环信应用的appkey -->
         <meta-data
             android:name="EASEMOB_APPKEY"
             android:value="${emAppKey}" />
-   ```   
+```
 5.拨打电话
    Intent.ACTION_DIAL直接拨打 需要权限
    Intent.FLAG_ACTIVITY_NEW_TASK 跳转到拨号界面，不需要权限
-   ```java
+```java
          //原来用Intent.ACTION_DIAL，会跳到拨号界面
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "10086"));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-   ```   
+```
 6.webview全屏显示image
-   ```java
+```java
    String imgSrcHtml = "<html><img src='" + url + "' style='width:100%;height:auto'/></html>";
    mWebView.loadData(imgSrcHtml, "text/html", "UTF-8");
-   ``` 
+```
+
+7.Dp,Px之间的转换
+
+```java
+public class DensityUtils {
+
+    public static int dpToPx(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, Resources.getSystem().getDisplayMetrics());
+    }
+
+    public static int pxToDp(float px) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, px, Resources.getSystem().getDisplayMetrics());
+    }
+}
+```
+
