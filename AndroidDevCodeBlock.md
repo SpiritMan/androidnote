@@ -97,4 +97,17 @@ public class DensityUtils {
     }
 }
 ```
+8.虚线
+```java
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="line">
+
+    <stroke
+        android:width="1dp"
+        android:dashWidth="5dp"
+        android:dashGap="5dp"
+        android:color="#33000000"/>
+
+</shape>
+```
 
